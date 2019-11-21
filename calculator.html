@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="input1" placeholder="put number">
+    <br />
+    <br />
+    <input type="text" id="input2">
+
+    <br />
+    <br />
+    <input type="text" id="results" readonly placeholder="results">
+    <br />
+    <br />
+    <button type="submit" onclick="add()">+</button>
+    <button type="submit" onclick="subs()">-</button>
+    <button type="submit" onclick="div()">/</button>
+    <button type="submit" onclick="multy()">*</button>
+
+
+    <script>
+
+        var input1, input2, results;
+
+        function add() {
+            input1 = parseInt(document.getElementById("input1").value);
+            input2 = parseInt(document.getElementById("input2").value);
+            results = input1 + input2;
+            document.getElementById("results").value = results;
+
+        }
+
+        function subs() {
+            input1 = parseInt(document.getElementById("input1").value);
+            input2 = parseInt(document.getElementById("input2").value);
+            results = input1 - input2;
+            document.getElementById("results").value = results;
+
+        }
+
+        function div() {
+            input1 = parseFloat(document.getElementById("input1").value);
+            input2 = parseFloat(document.getElementById("input2").value);
+            results = input1 / input2;
+            document.getElementById("results").value = results;
+
+        }
+
+
+        function multy() {
+            input1 = parseFloat(document.getElementById("input1").value);
+            input2 = parseFloat(document.getElementById("input2").value);
+            results = input1 * input2;
+            document.getElementById("results").value = results;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

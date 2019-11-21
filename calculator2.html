@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="in1">
+    <br>
+    <br>
+    <input type="text" id="in2">
+    <br><br>
+    <input type="text" id="result">
+    <br><br>
+    <select id="operators">
+        <option value="add">Addition</option>
+        <option value="sub">Subtraction</option>
+        <option value="multi">Multiplication</option>
+        <option value="div">Division</option>
+    </select>
+    <button type="submit" onclick="calc()">calculate</button>
+
+    <script>
+        function calc() {
+
+            var in1 = parseInt(document.querySelector("#in1").value);
+            var in2 = parseInt(document.querySelector("#in2").value);
+            var opr = document.querySelector("#operators").value;
+
+           var calculate;
+
+            if (opr == "add") {
+                calculate = in1 + in2;
+            } 
+            else if (opr == "sub"){
+                calculate = in1 - in2;
+
+            }
+            else if (opr == "multi"){
+                calculate = in1 * in2;
+
+            }
+
+            else if (opr == "div"){
+                calculate = in1 / in2;
+
+            }         
+
+            document.querySelector("#result").value = calculate
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
